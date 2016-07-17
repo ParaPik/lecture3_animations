@@ -41,17 +41,47 @@
                                     <constraint firstAttribute="width" secondItem="sFs-CH-iXw" secondAttribute="height" multiplier="1:1" id="KAl-hn-7Gr"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVh-1s-0ZV">
+                                <rect key="frame" x="20" y="391" width="280" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ONX-J8-vKN"/>
+                                </constraints>
+                                <state key="normal" title="Click Me"/>
+                                <connections>
+                                    <action selector="clickMeTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHF-nR-Qv5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqy-IP-fzb">
+                                <rect key="frame" x="20" y="469" width="280" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="spS-2e-cnF"/>
+                                </constraints>
+                                <state key="normal" title="Click Me Too"/>
+                                <connections>
+                                    <action selector="clickMeTooTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmI-ED-c4H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tqy-IP-fzb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3Da-3s-3gk"/>
+                            <constraint firstItem="RVh-1s-0ZV" firstAttribute="top" secondItem="sFs-CH-iXw" secondAttribute="bottom" constant="39" id="3az-sq-yVB"/>
                             <constraint firstAttribute="trailing" secondItem="sFs-CH-iXw" secondAttribute="trailing" constant="20" id="KU4-49-lyi"/>
+                            <constraint firstAttribute="trailing" secondItem="RVh-1s-0ZV" secondAttribute="trailing" constant="20" id="Yi6-g0-nQv"/>
+                            <constraint firstAttribute="trailing" secondItem="tqy-IP-fzb" secondAttribute="trailing" constant="20" id="aMZ-9K-omE"/>
                             <constraint firstItem="sFs-CH-iXw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="dHD-Ed-Z9W"/>
+                            <constraint firstItem="RVh-1s-0ZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="fwF-pP-NWZ"/>
+                            <constraint firstItem="tqy-IP-fzb" firstAttribute="top" secondItem="RVh-1s-0ZV" secondAttribute="bottom" constant="26" id="lUa-cu-XGd"/>
                             <constraint firstItem="sFs-CH-iXw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ovo-bt-eq0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jTV-bh-Fox"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="clickMe" destination="RVh-1s-0ZV" id="2hX-W6-wzg"/>
+                        <outlet property="clickMeToo" destination="tqy-IP-fzb" id="z1C-1E-UOe"/>
+                        <outlet property="clickMeTooTop" destination="lUa-cu-XGd" id="bzq-De-9X6"/>
+                        <outlet property="clickMeTop" destination="3az-sq-yVB" id="azc-za-mTY"/>
                         <outlet property="imageView" destination="sFs-CH-iXw" id="RUq-tJ-Uiy"/>
                     </connections>
                 </viewController>
